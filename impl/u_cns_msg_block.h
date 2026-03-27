@@ -179,7 +179,43 @@ namespace __u_console
                             }
                             continue;
                         }
-                        
+                        else if (ch == '\033')  //skip all ecs-codes for arrows, pageup, home and other...
+                        {
+                            /*
+                                \033[A UpArr                            
+                                \033[B DwArr                            
+                                \033[C RArr                            
+                                \033[D LArr                            
+                                \033[H or \033[1~ Home                            
+                                \033[F or \033[4~ End                            
+                                \033[3~ Delete                            
+                                \033[2~ Insert                            
+                                \033[5~ PgUp                        
+                                \033[6~ PgDw                      
+                            */
+                            if (t)
+                            {
+                                --t;
+                                _port->read();
+                                if (t)
+                                {
+                                    --t;
+                                    _port->read();
+                                }
+                                
+                                if (t)
+                                {
+                                    --t;
+                                    auto nc = _port->read();
+                                    if (nc != '~')          // skip pgup pgdn that ends ~
+                                    {
+                                        stream << ch;
+                                        _port->write(ch);
+                                    }
+                                }
+                            }
+                            continue;
+                        }
                         stream << ch;
                         _port->write(ch);    // back typed text to console(user should see what he write)
                     }

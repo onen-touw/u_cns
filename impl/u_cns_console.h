@@ -211,12 +211,12 @@ namespace __u_console
     private:
         void create_internal_blanks() {
             
-            if (_blanks.find("exit") != _blanks.end())
+            if (_blanks.find("exit") == _blanks.end())
             {
                 _blanks.emplace("exit", blank_t("Command for exit from console", exit_cns));
             }
             
-            if (_blanks.find("help") != _blanks.end())
+            if (_blanks.find("help") == _blanks.end())
             {
                 _blanks.emplace("help", blank_t("help", [&context = _blanks](const msg_block_t &bl) -> void
                 {
@@ -240,20 +240,20 @@ namespace __u_console
 
         }
 
-        void help_cns()
-        {
-            _block.write("class list:\n");
-            if (_blanks.empty())
-            {
-                _block.write("\tempty\n");
-                return;
-            }
+        // void help_cns()
+        // {
+        //     _block.write("class list:\n");
+        //     if (_blanks.empty())
+        //     {
+        //         _block.write("\tempty\n");
+        //         return;
+        //     }
 
-            for (const auto &i : _blanks)
-            {
-                _block << '\t' << i.first << '\t' << i.second.get_desc() << '\n';
-            }
-        }
+        //     for (const auto &i : _blanks)
+        //     {
+        //         _block << '\t' << i.first << '\t' << i.second.get_desc() << '\n';
+        //     }
+        // }
 
         static void exit_cns(const msg_block_t& bl)
         {
