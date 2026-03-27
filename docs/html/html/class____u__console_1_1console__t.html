@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UFO Console Module: Класс __u_console::console_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UFO Console Module<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Console interface for embedded systems</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class____u__console_1_1console__t.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class____u__console_1_1console__t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс __u_console::console_t<div class="ingroups"><a class="el" href="group__public__api.html">Public API</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Main console class.  
+ <a href="class____u__console_1_1console__t.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="u__cns__console_8h_source.html">u_cns_console.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:af500125beea0b6acfa8c88bc7c9cf970" id="r_af500125beea0b6acfa8c88bc7c9cf970"><td class="memItemLeft" align="right" valign="top"><a id="af500125beea0b6acfa8c88bc7c9cf970" name="af500125beea0b6acfa8c88bc7c9cf970"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>post_run_callback_t</b> = void(*)()</td></tr>
+<tr class="memdesc:af500125beea0b6acfa8c88bc7c9cf970"><td class="mdescLeft">&#160;</td><td class="mdescRight">A callback function that will be called before the console task is destroyed. You can use this to notify other threads that the console has stopped working. <br  />
+ <br /></td></tr>
+<tr class="separator:af500125beea0b6acfa8c88bc7c9cf970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a71f1d5a8349216a556eb82e7bfb39329" id="r_a71f1d5a8349216a556eb82e7bfb39329"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class____u__console_1_1console__t.html#a71f1d5a8349216a556eb82e7bfb39329">console_t</a> (<a class="el" href="class____u__console_1_1io__base__t.html">io_base_t</a> *port, size_t buf_sz, pre_run_callback_t pre_clb=nullptr, <a class="el" href="class____u__console_1_1console__t.html#af500125beea0b6acfa8c88bc7c9cf970">post_run_callback_t</a> post_clb=nullptr)</td></tr>
+<tr class="memdesc:a71f1d5a8349216a556eb82e7bfb39329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contructor of console.  <br /></td></tr>
+<tr class="separator:a71f1d5a8349216a556eb82e7bfb39329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec808f4a3b8c28abb58afc899fa7263" id="r_afec808f4a3b8c28abb58afc899fa7263"><td class="memItemLeft" align="right" valign="top"><a id="afec808f4a3b8c28abb58afc899fa7263" name="afec808f4a3b8c28abb58afc899fa7263"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>console_t</b> (<a class="el" href="class____u__console_1_1console__t.html">console_t</a> &amp;&amp;oth)</td></tr>
+<tr class="memdesc:afec808f4a3b8c28abb58afc899fa7263"><td class="mdescLeft">&#160;</td><td class="mdescRight">move constructor. This class only can be moved in constructor (no copy, no assignment and move operators) <br /></td></tr>
+<tr class="separator:afec808f4a3b8c28abb58afc899fa7263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3346790df8bfcd44926cab02569e08d2" id="r_a3346790df8bfcd44926cab02569e08d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class____u__console_1_1console__t.html#a3346790df8bfcd44926cab02569e08d2">mk_blank</a> (const char *cl_name, const char *desc, blank_t::callback_t foo)</td></tr>
+<tr class="memdesc:a3346790df8bfcd44926cab02569e08d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create blank(command or sub-program)  <br /></td></tr>
+<tr class="separator:a3346790df8bfcd44926cab02569e08d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9475fc905c6f94e5894552a692a68ab5" id="r_a9475fc905c6f94e5894552a692a68ab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class____u__console_1_1console__t.html#a9475fc905c6f94e5894552a692a68ab5">rm_blank</a> (const char *cl_name)</td></tr>
+<tr class="memdesc:a9475fc905c6f94e5894552a692a68ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove blank(command or sub-program)  <br /></td></tr>
+<tr class="separator:a9475fc905c6f94e5894552a692a68ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5723b14133f5609be57a66ea3345919" id="r_ac5723b14133f5609be57a66ea3345919"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class____u__console_1_1console__t.html#ac5723b14133f5609be57a66ea3345919">ctask</a> (ufo::token_t token)</td></tr>
+<tr class="memdesc:ac5723b14133f5609be57a66ea3345919"><td class="mdescLeft">&#160;</td><td class="mdescRight">console task that run console loop  <br /></td></tr>
+<tr class="separator:ac5723b14133f5609be57a66ea3345919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Main console class. </p>
+<p>Manages command registration (blanks) and the main input processing loop.</p>
+<h1><a class="anchor" id="registration"></a>
+Registration commands</h1>
+<p>Commands are registered via the <a class="el" href="class____u__console_1_1console__t.html#a3346790df8bfcd44926cab02569e08d2" title="Create blank(command or sub-program)">mk_blank()</a> method: </p><div class="fragment"><div class="line">console.mk_blank(<span class="stringliteral">&quot;mycmd&quot;</span>, <span class="stringliteral">&quot;Description&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_class" href="class____u__console_1_1msg__block__t.html">msg_block_t</a>&amp; bl) {</div>
+<div class="line">    <span class="comment">// reaction to call</span></div>
+<div class="line">});</div>
+<div class="ttc" id="aclass____u__console_1_1msg__block__t_html"><div class="ttname"><a href="class____u__console_1_1msg__block__t.html">__u_console::msg_block_t</a></div><div class="ttdoc">Console message block class.</div><div class="ttdef"><b>Definition</b> u_cns_msg_block.h:98</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="internal_commands"></a>
+Internal Commands</h1>
+<p>The console automatically creates two built-in commands:</p><ul>
+<li><b>help</b> - displays a list of all registered commands and help-info</li>
+<li><b>exit</b> - terminates the console</li>
+</ul>
+<p>These commands cannot be removed or overridden.</p>
+<h1><a class="anchor" id="threading"></a>
+Thread safety</h1>
+<p>The class is not thread-safe. It must be used in a single thread.</p>
+<h1><a class="anchor" id="move_only"></a>
+Move-only semantics</h1>
+<p>The class only supports moving; copying is prohibited. This allows the console to be safely passed to a thread.</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="class____u__console_1_1console__t.html">ufo::u_console_t</a> console(&amp;io, 255);</div>
+<div class="line">ufo::thread console_task(cns_cfg, &amp;<a class="code hl_function" href="class____u__console_1_1console__t.html#ac5723b14133f5609be57a66ea3345919">__u_console::console_t::ctask</a>, std::move(cns));</div>
+<div class="ttc" id="aclass____u__console_1_1console__t_html"><div class="ttname"><a href="class____u__console_1_1console__t.html">__u_console::console_t</a></div><div class="ttdoc">Main console class.</div><div class="ttdef"><b>Definition</b> u_cns_console.h:62</div></div>
+<div class="ttc" id="aclass____u__console_1_1console__t_html_ac5723b14133f5609be57a66ea3345919"><div class="ttname"><a href="class____u__console_1_1console__t.html#ac5723b14133f5609be57a66ea3345919">__u_console::console_t::ctask</a></div><div class="ttdeci">void ctask(ufo::token_t token)</div><div class="ttdoc">console task that run console loop</div><div class="ttdef"><b>Definition</b> u_cns_console.h:174</div></div>
+</div><!-- fragment --><dl class="section see"><dt>См. также</dt><dd><a class="el" href="class____u__console_1_1msg__block__t.html" title="Console message block class.">msg_block_t</a> </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a71f1d5a8349216a556eb82e7bfb39329" name="a71f1d5a8349216a556eb82e7bfb39329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f1d5a8349216a556eb82e7bfb39329">&#9670;&#160;</a></span>console_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">__u_console::console_t::console_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class____u__console_1_1io__base__t.html">io_base_t</a> *&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buf_sz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pre_run_callback_t&#160;</td>
+          <td class="paramname"><em>pre_clb</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class____u__console_1_1console__t.html#af500125beea0b6acfa8c88bc7c9cf970">post_run_callback_t</a>&#160;</td>
+          <td class="paramname"><em>post_clb</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Contructor of console. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>stream that proveide io funcrional (read/write, &lt;&lt;) </td></tr>
+    <tr><td class="paramname">buf_sz</td><td>size of stream buffer </td></tr>
+    <tr><td class="paramname">pre_clb</td><td>(optional). A callback function that will be called before the console task is started. You can use this to notify other threads that the console has started or to check whether the console can be started. If the console cannot be started, the callback function should return false. </td></tr>
+    <tr><td class="paramname">post_clb</td><td>(optional). A callback function that will be called before the console task is destroyed. You can use this to notify other threads that the console has stopped working. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ac5723b14133f5609be57a66ea3345919" name="ac5723b14133f5609be57a66ea3345919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5723b14133f5609be57a66ea3345919">&#9670;&#160;</a></span>ctask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __u_console::console_t::ctask </td>
+          <td>(</td>
+          <td class="paramtype">ufo::token_t&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>console task that run console loop </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>ufo-system-thread-parameter Use with caution </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3346790df8bfcd44926cab02569e08d2" name="a3346790df8bfcd44926cab02569e08d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3346790df8bfcd44926cab02569e08d2">&#9670;&#160;</a></span>mk_blank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __u_console::console_t::mk_blank </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cl_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">blank_t::callback_t&#160;</td>
+          <td class="paramname"><em>foo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create blank(command or sub-program) </p>
+<p>This console system has some internal 'blanks' such as "exit", "help" that cant be overridden. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cl_name</td><td>Name of you 'blank' (or command or sub-program) </td></tr>
+    <tr><td class="paramname">desc</td><td>Description of 'blank' that shown when you entering "help" command </td></tr>
+    <tr><td class="paramname">foo</td><td>A callback function that will be called when user type &lt;cl_name&gt; &lt;&ndash;parameters...&gt;(optional) <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9475fc905c6f94e5894552a692a68ab5" name="a9475fc905c6f94e5894552a692a68ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9475fc905c6f94e5894552a692a68ab5">&#9670;&#160;</a></span>rm_blank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __u_console::console_t::rm_blank </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cl_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove blank(command or sub-program) </p>
+<p>This console system has some internal 'blanks' such as "exit", "help" that cant be removed. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cl_name</td><td>Name of you 'blank' (or command or sub-program) that you want to delete </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>impl/<a class="el" href="u__cns__console_8h_source.html">u_cns_console.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>__u_console</b></li><li class="navelem"><a class="el" href="class____u__console_1_1console__t.html">console_t</a></li>
+    <li class="footer">Документация по UFO Console Module. Последние изменения: Пт 27 Мар 2026 11:00:48. Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

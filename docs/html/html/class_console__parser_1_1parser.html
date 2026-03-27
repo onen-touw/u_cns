@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UFO Console Module: Класс Console_parser::parser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UFO Console Module<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Console interface for embedded systems</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_console__parser_1_1parser.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_console__parser_1_1parser-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Console_parser::parser</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class for simple access to console line variables like &ndash;a=123.  
+ <a href="class_console__parser_1_1parser.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="parser_8h_source.html">parser.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_console__parser_1_1parser_1_1ind__t.html">ind_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_console__parser_1_1parser_1_1opt__ind__t.html">opt_ind_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1d2199528156bb5dd4e61e57618deb29" id="r_a1d2199528156bb5dd4e61e57618deb29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#a1d2199528156bb5dd4e61e57618deb29">parser</a> (const std::string &amp;s, bool parse_prog_name=false, bool strict=false, const char *separators=default_line_separators)</td></tr>
+<tr class="memdesc:a1d2199528156bb5dd4e61e57618deb29"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor if has args do parse console line automticaly.  <br /></td></tr>
+<tr class="separator:a1d2199528156bb5dd4e61e57618deb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec293bca2e780564f18ffe97eceae7c" id="r_aaec293bca2e780564f18ffe97eceae7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#aaec293bca2e780564f18ffe97eceae7c">parser</a> (std::string &amp;&amp;s, bool parse_prog_name=false, bool strict=false, const char *separators=default_line_separators)</td></tr>
+<tr class="memdesc:aaec293bca2e780564f18ffe97eceae7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor if has args do parse console line automticaly.  <br /></td></tr>
+<tr class="separator:aaec293bca2e780564f18ffe97eceae7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892ff48af061b1bf2eb58be960062ce5" id="r_a892ff48af061b1bf2eb58be960062ce5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#a892ff48af061b1bf2eb58be960062ce5">parse</a> (const std::string &amp;s, bool parse_prog_name=false, const char *separators=default_line_separators)</td></tr>
+<tr class="memdesc:a892ff48af061b1bf2eb58be960062ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">parse console line. If called more than once reset all data before run parser algorithm.  <br /></td></tr>
+<tr class="separator:a892ff48af061b1bf2eb58be960062ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3027cb7745181e6143bdd4a39a562799" id="r_a3027cb7745181e6143bdd4a39a562799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#a3027cb7745181e6143bdd4a39a562799">parse</a> (std::string &amp;&amp;s, bool parse_prog_name=false, const char *separators=default_line_separators)</td></tr>
+<tr class="memdesc:a3027cb7745181e6143bdd4a39a562799"><td class="mdescLeft">&#160;</td><td class="mdescRight">parse console line. If called more than once reset all data before run parser algorithm.  <br /></td></tr>
+<tr class="separator:a3027cb7745181e6143bdd4a39a562799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b69e2896cb7326efa366b783ed21027" id="r_a8b69e2896cb7326efa366b783ed21027"><td class="memItemLeft" align="right" valign="top"><a id="a8b69e2896cb7326efa366b783ed21027" name="a8b69e2896cb7326efa366b783ed21027"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="memdesc:a8b69e2896cb7326efa366b783ed21027"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset all parser data and error flags. After call this function any <a class="el" href="class_console__parser_1_1parser.html#a396a60eea75fe92c1c22f7304ff9e7ee" title="Bind your variable  that shoud be found by token &lt;token&gt;.">bind()</a> return false and <a class="el" href="class_console__parser_1_1parser.html#ad0e3276c201b88626b989b47b422ff42" title="return error indicator.">good()</a> return true. <br /></td></tr>
+<tr class="separator:a8b69e2896cb7326efa366b783ed21027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e3276c201b88626b989b47b422ff42" id="r_ad0e3276c201b88626b989b47b422ff42"><td class="memItemLeft" align="right" valign="top"><a id="ad0e3276c201b88626b989b47b422ff42" name="ad0e3276c201b88626b989b47b422ff42"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>good</b> () const</td></tr>
+<tr class="memdesc:ad0e3276c201b88626b989b47b422ff42"><td class="mdescLeft">&#160;</td><td class="mdescRight">return error indicator. <br /></td></tr>
+<tr class="separator:ad0e3276c201b88626b989b47b422ff42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1bce278bb748cda574f08f9068c8833" id="r_aa1bce278bb748cda574f08f9068c8833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#aa1bce278bb748cda574f08f9068c8833">log</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:aa1bce278bb748cda574f08f9068c8833"><td class="mdescLeft">&#160;</td><td class="mdescRight">log function.  <br /></td></tr>
+<tr class="separator:aa1bce278bb748cda574f08f9068c8833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396a60eea75fe92c1c22f7304ff9e7ee" id="r_a396a60eea75fe92c1c22f7304ff9e7ee"><td class="memTemplParams" colspan="2">template&lt;typename Ty &gt; </td></tr>
+<tr class="memitem:a396a60eea75fe92c1c22f7304ff9e7ee"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#a396a60eea75fe92c1c22f7304ff9e7ee">bind</a> (Ty *var, const std::string &amp;token) const</td></tr>
+<tr class="memdesc:a396a60eea75fe92c1c22f7304ff9e7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind your variable <em> that shoud be found by token &lt;token&gt;. </em> <br /></td></tr>
+<tr class="separator:a396a60eea75fe92c1c22f7304ff9e7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05a9538d18492a537ae7df7cb292729" id="r_aa05a9538d18492a537ae7df7cb292729"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#aa05a9538d18492a537ae7df7cb292729">find</a> (const std::string &amp;token) const</td></tr>
+<tr class="memdesc:aa05a9538d18492a537ae7df7cb292729"><td class="mdescLeft">&#160;</td><td class="mdescRight">find token in console line.  <br /></td></tr>
+<tr class="separator:aa05a9538d18492a537ae7df7cb292729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4fdeedfc4d5d6673c174e543260f0a" id="r_a9a4fdeedfc4d5d6673c174e543260f0a"><td class="memTemplParams" colspan="2">template&lt;typename Ty &gt; </td></tr>
+<tr class="memitem:a9a4fdeedfc4d5d6673c174e543260f0a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#a9a4fdeedfc4d5d6673c174e543260f0a">bind</a> (std::vector&lt; Ty &gt; *arr, const std::string &amp;token) const</td></tr>
+<tr class="memdesc:a9a4fdeedfc4d5d6673c174e543260f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind your std::vector that shoud be found by token &lt;token&gt;.  <br /></td></tr>
+<tr class="separator:a9a4fdeedfc4d5d6673c174e543260f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab28fda65a22ebe7e49397dc977d7ac2" id="r_aab28fda65a22ebe7e49397dc977d7ac2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console__parser_1_1parser.html#aab28fda65a22ebe7e49397dc977d7ac2">get_prog_name</a> () const</td></tr>
+<tr class="memdesc:aab28fda65a22ebe7e49397dc977d7ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get program name.  <br /></td></tr>
+<tr class="separator:aab28fda65a22ebe7e49397dc977d7ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Class for simple access to console line variables like &ndash;a=123. </p>
+<p>Support program name (first word in line). For enable see Construcors and parse definition</p>
+<p>Support two modes: strict and no-strict. If strict mode enabled any error stop parser. Otherwise, if no-strict mode, it is possible bind wrong variable. You can check state by call <a class="el" href="class_console__parser_1_1parser.html#ad0e3276c201b88626b989b47b422ff42" title="return error indicator.">good()</a> function.</p>
+<p>For set your variables see <a class="el" href="class_console__parser_1_1parser.html#a396a60eea75fe92c1c22f7304ff9e7ee" title="Bind your variable  that shoud be found by token &lt;token&gt;.">bind()</a> function definition. <br  />
+</p>
+<p>Rules:</p>
+<p>1) Program name (if expected and flag enabled) shoud starts from alphabet symbol otherwise it set bad flag.</p>
+<p>2) Every options must be used in special format: &ndash;key=value or -key=value. No any spaces from first dash to last symbol except large string(see 4) otherwise it set bad flag.</p>
+<p>3) Arrays must be used in format -key or &ndash;key=10,23,42,2. No any spaces...</p>
+<p>4) Large strings should be double quoted by symbol ".
+
+Example of bad options:
+@iverbatim 
+---v=1
+
+- 
+
+=2 
+
+--gp=12.2.5 
+
+--str=\"no end --vc=10,,20 -- -key=val"  </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1d2199528156bb5dd4e61e57618deb29" name="a1d2199528156bb5dd4e61e57618deb29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2199528156bb5dd4e61e57618deb29">&#9670;&#160;</a></span>parser() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Console_parser::parser::parser </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parse_prog_name</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>separators</em> = <code>default_line_separators</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructor if has args do parse console line automticaly. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>console line in std::string format. </td></tr>
+    <tr><td class="paramname">parse_prog_name</td><td>set if expect that fisrt word if program name. </td></tr>
+    <tr><td class="paramname">strict</td><td>flag for enable/disable strict mode. If enabled when first error will met than stop parser algorithm and clear all data. </td></tr>
+    <tr><td class="paramname">separators</td><td>array of separators by defult: 'space', '\n', '\t'. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaec293bca2e780564f18ffe97eceae7c" name="aaec293bca2e780564f18ffe97eceae7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec293bca2e780564f18ffe97eceae7c">&#9670;&#160;</a></span>parser() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Console_parser::parser::parser </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parse_prog_name</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>separators</em> = <code>default_line_separators</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructor if has args do parse console line automticaly. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s&amp;&amp;</td><td>console line in std::string format. </td></tr>
+    <tr><td class="paramname">parse_prog_name</td><td>set if expect that fisrt word if program name. </td></tr>
+    <tr><td class="paramname">strict</td><td>flag for enable/disable strict mode. If enabled when first error will met than stop parser algorithm and clear all data. </td></tr>
+    <tr><td class="paramname">separators</td><td>array of separators by defult: 'space', '\n', '\t'. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a9a4fdeedfc4d5d6673c174e543260f0a" name="a9a4fdeedfc4d5d6673c174e543260f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4fdeedfc4d5d6673c174e543260f0a">&#9670;&#160;</a></span>bind() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Ty &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Console_parser::parser::bind </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; Ty &gt; *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bind your std::vector that shoud be found by token &lt;token&gt;. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Ty</td><td>type of vector's item Support any floating and integral type and std::string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>pointer to vector that you want to bind. If (arr == nullptr) skip binding. </td></tr>
+    <tr><td class="paramname">token</td><td>string of tokens. You can write multyple words separated by ',' (comma). Example: "-v,--v,--verbose". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true if found option in console line and false otherwise. If strict mode enabled and error catched return false. </dd></dl>
+
+</div>
+</div>
+<a id="a396a60eea75fe92c1c22f7304ff9e7ee" name="a396a60eea75fe92c1c22f7304ff9e7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396a60eea75fe92c1c22f7304ff9e7ee">&#9670;&#160;</a></span>bind() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Ty &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Console_parser::parser::bind </td>
+          <td>(</td>
+          <td class="paramtype">Ty *&#160;</td>
+          <td class="paramname"><em>var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bind your variable <em> that shoud be found by token &lt;token&gt;. </em></p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Ty</td><td>type of variable <em> that you want to bind. Support any floating and integral type and std::string. </em></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td><em>pointer to variable that you want to bind. If (var == nullptr) skip binding. </em></td></tr>
+    <tr><td class="paramname">token</td><td><em>string of tokens. You can write multyple words separated by ',' (comma). Example: "-v,--v,--verbose". </em></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><em> true if found option in console line and false otherwise. If strict mode enabled and error catched return false. </em></dd></dl>
+
+</div>
+</div>
+<a id="aa05a9538d18492a537ae7df7cb292729" name="aa05a9538d18492a537ae7df7cb292729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05a9538d18492a537ae7df7cb292729">&#9670;&#160;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Console_parser::parser::find </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>find token in console line. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>string of tokens. You can write multyple words separated by ',' (comma). Example: "-v,--v,--verbose". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true if found option in console line and false otherwise. If strict mode enabled and error catched return false. </dd></dl>
+
+</div>
+</div>
+<a id="aab28fda65a22ebe7e49397dc977d7ac2" name="aab28fda65a22ebe7e49397dc977d7ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab28fda65a22ebe7e49397dc977d7ac2">&#9670;&#160;</a></span>get_prog_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Console_parser::parser::get_prog_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get program name. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>return empty string if error was met in strict mode or flag parse_prog_name was setted false </dd></dl>
+
+</div>
+</div>
+<a id="aa1bce278bb748cda574f08f9068c8833" name="aa1bce278bb748cda574f08f9068c8833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1bce278bb748cda574f08f9068c8833">&#9670;&#160;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_parser::parser::log </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log function. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>targer stream e.g. std::cout, std::ofstream ... </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a892ff48af061b1bf2eb58be960062ce5" name="a892ff48af061b1bf2eb58be960062ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892ff48af061b1bf2eb58be960062ce5">&#9670;&#160;</a></span>parse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_parser::parser::parse </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parse_prog_name</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>separators</em> = <code>default_line_separators</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>parse console line. If called more than once reset all data before run parser algorithm. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>console line in std::string format. </td></tr>
+    <tr><td class="paramname">parse_prog_name</td><td>set if expect that fisrt word if program name. </td></tr>
+    <tr><td class="paramname">separators</td><td>- array of separators by defult: 'space', '\n', '\t'. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3027cb7745181e6143bdd4a39a562799" name="a3027cb7745181e6143bdd4a39a562799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3027cb7745181e6143bdd4a39a562799">&#9670;&#160;</a></span>parse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_parser::parser::parse </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parse_prog_name</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>separators</em> = <code>default_line_separators</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>parse console line. If called more than once reset all data before run parser algorithm. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s&amp;&amp;</td><td>console line in std::string format. </td></tr>
+    <tr><td class="paramname">parse_prog_name</td><td>set if expect that fisrt word if program name. </td></tr>
+    <tr><td class="paramname">separators</td><td>array of separators by defult: 'space', '\n', '\t'. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>impl/Console-parser/<a class="el" href="parser_8h_source.html">parser.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Console_parser</b></li><li class="navelem"><a class="el" href="class_console__parser_1_1parser.html">parser</a></li>
+    <li class="footer">Документация по UFO Console Module. Последние изменения: Пт 27 Мар 2026 11:00:48. Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

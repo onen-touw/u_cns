@@ -1,0 +1,119 @@
+/**
+ * @page external_parser Console-parser
+ * @ingroup public_api
+ * 
+ * @section intro_parser Введение
+ * 
+ * **Console-parser** - This is an external module for parsing command-line arguments, integrated into UFO Console. 
+ * It is located in the subdirectory `impl/Console-parser/`.
+ *
+ * https://github.com/onen-touw/Console-parser
+ * 
+ * @section features_parser Сapability
+ * 
+ * - Support for strict and non-strict modes
+ * - Automatic type conversion (int, float, string, vector)
+ * - Multiple aliases for options (например, `-v,--verbose`)
+ * - Support for comma-separated arrays (`--numbers=1,2,3,4`)
+ * - Support for large strings (double quotes) (`--message="Hello World"`)
+ * - Автоматическое распознавание имени программы (первое слово)
+ * 
+ * @section usage_parser Usage in UFO Console
+ * 
+ * In UFO Console, the parser automatically parses each input line.
+ * It is accessed via the @ref ufo::u_console_msg_block_t::get_opt_list():
+ * 
+ * @code{.cpp}
+ * console.mk_blank("example", "Example command", [](const ufo::u_console_msg_block_t& bl) {
+ *     const auto& parser = bl.get_opt_list();
+ *     
+ *     // Getting value
+ *     int value = 0;
+ *     if (parser.bind(&value, "-v,--value")) {
+ *         bl << "Value: " << value << "\n";
+ *     }
+ *     
+ *     // Checking for a flag
+ *     if (parser.find("--verbose")) {
+ *         bl << "Verbose mode enabled\n";
+ *     }
+ *     
+ *     // Getting array
+ *     std::vector<int> numbers;
+ *     if (parser.bind(&numbers, "-n,--numbers")) {
+ *         for (auto n : numbers) {
+ *             bl << n << " ";
+ *         }
+ *         bl << "\n";
+ *     }
+ * });
+ * @endcode
+ * 
+ * @section examples_parser Parsing examples
+ * 
+ * @subsection example_simple Arguments
+ * 
+ * Input string: `set --temp=25.5 --mode=fast`
+ * 
+ * @code{.cpp}
+ * float temp;
+ * std::string mode;
+ * parser.bind(&temp, "--temp");
+ * parser.bind(&mode, "--mode");
+ * // temp = 25.5, mode = "fast"
+ * @endcode
+ * 
+ * @subsection example_array Arrays
+ * 
+ * Input string: `average --values=10,20,30,40`
+ * 
+ * @code{.cpp}
+ * std::vector<int> values;
+ * parser.bind(&values, "--values");
+ * // values = [10, 20, 30, 40]
+ * @endcode
+ * 
+ * @subsection example_quoted Double quotes
+ * 
+ * Input string: `echo --message="Hello, World!"`
+ * 
+ * @code{.cpp}
+ * std::string msg;
+ * parser.bind(&msg, "--message");
+ * // msg = Hello, World!
+ * @endcode
+ * 
+ * @subsection example_aliases Aliases
+ * 
+ * Input string: `config -p=1234 --verbose`
+ * 
+ * @code{.cpp}
+ * int port;
+ * bool verbose;
+ * parser.bind(&port, "-p,--port");     // найдет по -p
+ * verbose = parser.find("--verbose");   // найдет --verbose
+ * @endcode
+ * 
+ * @section methods_parser Basic methods
+ * 
+ * @copydoc Console_parser::parser::bind
+ * @copydoc Console_parser::parser::find
+ * @copydoc Console_parser::parser::get_prog_name
+ * @copydoc Console_parser::parser::good
+ * 
+ * @section strict_mode Strict mode
+ * 
+ * The console is running in strict mode. (`parser(true)` in constructor of msg_block_t).
+ * This means that if there is any error in the command syntax:
+ * - The parser sets an error flag
+ * - All bind() operations return false and bind nothing
+ * - The user sees an error message
+ * 
+ * @section full_docs Full documentation
+ * 
+ * Full documentation for Console-parser is available in the file:
+ * @link impl/Console-parser/parser.h parser.h @endlink
+ * 
+ * @see @ref ufo::u_console_msg_block_t::get_opt_list
+ * @see Console_parser::parser
+ */

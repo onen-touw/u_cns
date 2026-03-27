@@ -1,0 +1,3 @@
+[submodule "impl/Console-parser"]
+	path = impl/Console-parser
+	url = https://github.com/onen-touw/Console-parser.git

@@ -1,0 +1,56 @@
+/**
+ * @mainpage UFO Console Module
+ * 
+ * @section intro Introduction
+ * A module for processing console commands with the ability to integrate into embedded systems.
+ * Provides a user-friendly interface for creating an interactive command line.
+ * 
+ * @section features Сapabilities
+ * - User command registration (blanks) (blanks)
+ * - Automatic parsing of command line arguments
+ * - Support for various I/O types (UART, user streams)
+ * - Built-in help and exit commands
+ * - Move-only design for thread-safe operation
+ * 
+ * @section architecture Архитектура
+ * 
+ * The module consists of the following key components:
+ * 
+ * - **@ref ufo::u_console_t** - main console class (command management)
+ * - **@ref ufo::u_console_msg_block_t** - message block (working with input/output in callbacks)
+ * - **@ref __u_console::io_base_t** - abstract base class for input/output
+ * - **Console-parser** - external module for parsing arguments
+ * 
+ * @section quick_start Quick start
+ * 
+ * @code{.cpp}
+ * #include "u_cns.h"
+ * 
+ * // 1. Create an input-output stream (for example, UART)
+ * ufo::u_console_uart_stream_t io(&uart_driver);
+ * 
+ * // 2. Create console
+ * ufo::u_console_t console(&io, 255);
+ * 
+ * // 3. Register commands
+ * console.mk_blank("hello", "Prints greeting message", [](const ufo::u_console_msg_block_t& bl) {
+ *     bl << "Hello, World!\n";
+ * });
+ * 
+ * // 4. We run it in a separate thread
+ * ufo::thread console_task(cns_cfg, &__u_console::console_t::ctask, std::move(cns));
+ * console_thread.join();
+ * @endcode
+ * 
+ * @section dependencies Dependencies
+ * - **Console-parser** - argument parsing module (located in impl/Console-parser/)
+ * - **u_sys** - system utilities (streams)
+ * - **u_drivers** - device drivers (optional, for UART)
+ * 
+ * @defgroup public_api Public API
+ * @brief Interfaces available to the user for working with the console
+ * 
+ * @defgroup impl_details Implementation details
+ * @brief Inner classes (not intended for direct use)
+ * @internal
+ */
