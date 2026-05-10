@@ -3,4 +3,4 @@
 	url = https://github.com/onen-touw/Console-parser.git
 [submodule "src/u_cns/impl/Console-parser"]
 	path = src/u_cns/impl/Console-parser
-	url = https://github.com/onen-touw/u_cns.git
+	url = https://github.com/onen-touw/Console-parser.git
