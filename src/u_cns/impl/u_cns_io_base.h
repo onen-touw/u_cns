@@ -28,6 +28,4 @@ namespace __u_console
         virtual char read() = 0;
 
     };
-
-
 };

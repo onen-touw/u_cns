@@ -12,7 +12,6 @@
 #include <string>
 #include "u_cns_msg_block.h"
 
-
 namespace __u_console
 {
     class blank_t
@@ -23,7 +22,6 @@ namespace __u_console
     private:
         std::string _desc;
         callback_t _clb = nullptr;
-        
     public:
 
         blank_t(const char* desc, callback_t foo) : 
@@ -63,6 +61,5 @@ namespace __u_console
             _clb(b);
         }
     };
-
 
 } // __u_console

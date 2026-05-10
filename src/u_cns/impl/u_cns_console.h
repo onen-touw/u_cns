@@ -136,6 +136,11 @@ namespace __u_console
                 return;
             }
 
+            if (!foo)
+            {
+                return;
+            }
+
             auto it = _blanks.find(cl_name);
             if (it != _blanks.end())
             {
@@ -171,7 +176,7 @@ namespace __u_console
 
         /// @brief console task that run console loop
         /// @param token ufo-system-thread-parameter Use with caution
-        void ctask(ufo::token_t token){
+        void ctask(){
             if (_clb_pre)
             {
                 bool r = _clb_pre();
@@ -185,7 +190,7 @@ namespace __u_console
 
             _blanks.find("help")->second.run(_block);
 
-            while (token && _block.get_event() != event_t::exit)
+            while (_block.get_event() != event_t::exit)
             {
                 _block.write("u_cns>");    
                 auto line = _block.read_line();
@@ -239,21 +244,6 @@ namespace __u_console
             }
 
         }
-
-        // void help_cns()
-        // {
-        //     _block.write("class list:\n");
-        //     if (_blanks.empty())
-        //     {
-        //         _block.write("\tempty\n");
-        //         return;
-        //     }
-
-        //     for (const auto &i : _blanks)
-        //     {
-        //         _block << '\t' << i.first << '\t' << i.second.get_desc() << '\n';
-        //     }
-        // }
 
         static void exit_cns(const msg_block_t& bl)
         {

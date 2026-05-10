@@ -46,7 +46,7 @@ namespace __u_console
         size_t size() const { return _buffer.size(); }
         const std::string& str() const {return _buffer; }
 
-        u_cns_streambuf_t& operator<<(char c)
+        u_cns_streambuf_t &operator<<(char c)
         {
             _buffer.push_back(c);
             return *this;

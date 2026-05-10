@@ -301,6 +301,17 @@ namespace __u_console
             _port->write(c);
         }
 
+        char read() const
+        {
+            char c = 0;
+            uint16_t t = _port->available();
+            if (t)
+            {
+                c = _port->read();
+            }
+            return c;
+        }
+
         const parser_t& get_opt_list() const {
             return _parser;
         }
